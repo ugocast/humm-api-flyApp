@@ -23,15 +23,15 @@
   },
   "ACL": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "RoleMapping": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Role": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "Language_Country": {
     "dataSource": "mongoDBDs",
