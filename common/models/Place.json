@@ -1,0 +1,111 @@
+{
+  "name": "Place",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "coordinates": {
+      "type": [
+        "geopoint"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "description_where_fish": {
+      "type": "string",
+      "required": false
+    },
+    "description_equipment": {
+      "type": "string",
+      "required": false
+    },
+    "description_fishes": {
+      "type": "string",
+      "required": false
+    },
+    "fishing_type": {
+      "type": "string",
+      "required": true
+    },
+    "body_of_water_type": {
+      "type": "string",
+      "required": true
+    },
+    "depth": {
+      "type": "string",
+      "required": false
+    },
+    "monthly_average_flow": {
+      "type": ["string"],
+      "required": false
+    },
+    "monthly_average_turbidity": {
+      "type": ["string"],
+      "required": false
+    },
+    "monthly_average_water_temperature": {
+      "type": ["string"],
+      "required": false
+    },
+    "monthly_average_ph": {
+      "type": ["string"],
+      "required": false
+    },
+    "url_images_front": {
+      "type": "string",
+      "required": true
+    },
+    "url_images_detail": {
+      "type": ["string"],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "firstLevel": {
+      "type": "belongsTo",
+      "model": "First_Level",
+      "foreignKey": "first_level_id"
+    },
+    "regulations": {
+      "type": "hasMany",
+      "model": "Regulation",
+      "foreignKey": "place_id"
+    },
+    "fishes": {
+      "type": "hasAndBelongsToMany",
+      "model": "Fish",
+      "foreignKey": "fish_id"
+    },
+    "flies": {
+      "type": "hasAndBelongsToMany",
+      "model": "Fly_Fishing",
+      "foreignKey": "fly_id"
+    },
+    "insects": {
+      "type": "hasAndBelongsToMany",
+      "model": "Insect",
+      "foreignKey": "insect_id"
+    },
+    "advertisements": {
+      "type": "hasAndBelongsToMany",
+      "model": "Advertisement",
+      "foreignKey": "advertisement_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "TermsAndConditions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "TermsAndConditionsText": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "country": {
+      "type": "belongsTo",
+      "model": "Language_Country",
+      "foreignKey": "language_country_code"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

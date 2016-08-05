@@ -1,0 +1,32 @@
+{
+  "name": "Fly_Fishing",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "fly_type": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_front": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_detail": {
+      "type": ["string"],
+      "required": false
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

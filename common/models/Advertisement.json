@@ -1,0 +1,46 @@
+{
+  "name": "Advertisement",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "advertisement_type": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "email": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "address": {
+      "type": "string",
+      "required": false
+    },
+    "coordinates": {
+      "type": [
+        "geopoint"
+      ],
+      "required": false
+    },
+    "url_image_logo": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

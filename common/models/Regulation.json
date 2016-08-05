@@ -1,0 +1,32 @@
+{
+  "name": "Regulation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "species": {
+      "type": "string",
+      "required": true
+    },
+    "fishing_season_message": {
+      "type": "string",
+      "required": true
+    },
+    "fishing_tackles_message": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "place": {
+      "type": "belongsTo",
+      "model": "Place",
+      "foreignKey": "place_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

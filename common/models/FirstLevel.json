@@ -1,0 +1,55 @@
+{
+  "name": "First_Level",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "first_level_code": {
+      "type": "string",
+      "required": true
+    },
+    "google_place_id": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "coordinates": {
+      "type": [
+        "geopoint"
+      ],
+      "required": false
+    },
+    "url_images_front": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_detail": {
+      "type": ["string"],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "country": {
+      "type": "belongsTo",
+      "model": "Language_Country",
+      "foreignKey": "language_country_code"
+    },
+    "places": {
+      "type": "hasMany",
+      "model": "Place",
+      "foreignKey": "first_level_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

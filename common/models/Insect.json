@@ -1,0 +1,32 @@
+{
+  "name": "Insect",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "insect_type": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_front": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_detail": {
+      "type": ["string"],
+      "required": false
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

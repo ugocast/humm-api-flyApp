@@ -1,0 +1,42 @@
+{
+  "name": "Fish",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "scientific_name": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "average_weight": {
+      "type": "string",
+      "required": false
+    },
+    "average_size": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_front": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_detail": {
+      "type": ["string"],
+      "required": false
+    }
+  },
+  "relations": {
+  },
+  "acls": [],
+  "methods": {}
+}

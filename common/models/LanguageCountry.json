@@ -1,0 +1,60 @@
+{
+  "name": "Language_Country",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "required": true
+    },
+    "language_country_code": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "google_place_id": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": false
+    },
+    "coordinates": {
+      "type": [
+        "geopoint"
+      ],
+      "required": false
+    },
+    "url_images_front": {
+      "type": "string",
+      "required": false
+    },
+    "url_images_detail": {
+      "type": ["string"],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "first_Levels": {
+      "type": "hasMany",
+      "model": "First_Level",
+      "foreignKey": "language_country_code"
+    },
+    "termsAndConditions": {
+      "type": "hasMany",
+      "model": "TermsAndConditions",
+      "foreignKey": "language_country_code"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
