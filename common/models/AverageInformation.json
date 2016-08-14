@@ -1,62 +1,53 @@
 {
-  "name": "Language_Country",
+  "name": "AverageInformation",
   "base": "PersistedModel",
-  "idInjection": false,
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "country": {
+    "averageName": {
       "type": "string",
       "required": true
     },
-    "language": {
-      "type": "string",
+    "enable": {
+      "type": "Boolean",
       "required": true
     },
-    "language_country_code": {
-      "type": "string",
-      "id": true,
-      "required": true
+    "showNumber": {
+      "type": "Boolean",
+      "required": false
     },
-    "google_place_id": {
-      "type": "string",
-      "required": true
-    },
-    "address": {
+    "averageLabelMin": {
       "type": "string",
       "required": false
     },
-    "coordinates": {
-      "type": [
-        "geopoint"
-      ],
-      "required": false
-    },
-    "url_images_front": {
+    "averageLabelMed": {
       "type": "string",
       "required": false
     },
-    "url_images_detail": {
+    "averageLabelMax": {
+      "type": "string",
+      "required": false
+    },
+    "averageValueMin": {
+      "type": ["string"],
+      "required": false
+    },
+    "averageValueMed": {
+      "type": ["string"],
+      "required": false
+    },
+    "averageValueMax": {
       "type": ["string"],
       "required": false
     }
   },
   "validations": [],
   "relations": {
-    "first_Levels": {
-      "type": "hasMany",
-      "model": "First_Level",
-      "foreignKey": "language_country_code"
-    },
-    "termsAndConditions": {
-      "type": "hasMany",
-      "model": "TermsAndConditions",
-      "foreignKey": "language_country_code"
-    },
-    "averageInformations": {
-      "type": "hasMany",
-      "model": "AverageInformation",
+    "country": {
+      "type": "belongsTo",
+      "model": "Language_Country",
       "foreignKey": "language_country_code"
     }
   },

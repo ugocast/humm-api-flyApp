@@ -68,5 +68,9 @@
   "TermsAndConditions": {
     "dataSource": "mongoDBDs",
     "public": true
+  },
+  "AverageInformation": {
+    "dataSource": "mongoDBDs",
+    "public": true
   }
 }
