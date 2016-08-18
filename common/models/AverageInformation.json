@@ -10,12 +10,20 @@
       "type": "string",
       "required": true
     },
-    "enable": {
+    "showAverageLabel": {
       "type": "Boolean",
       "required": true
     },
-    "showNumber": {
+    "showValue": {
       "type": "Boolean",
+      "required": true
+    },
+    "showValueLabel": {
+      "type": "Boolean",
+      "required": true
+    },
+    "valueLabel": {
+      "type": "String",
       "required": false
     },
     "averageLabelMin": {

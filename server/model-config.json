@@ -72,5 +72,9 @@
   "AverageInformation": {
     "dataSource": "mongoDBDs",
     "public": true
+  },
+  "AppUtils": {
+    "dataSource": "mongoDBDs",
+    "public": true
   }
 }
